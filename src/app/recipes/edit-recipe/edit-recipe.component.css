@@ -1,0 +1,10 @@
+button{
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched{
+    border: 1px solid lightcoral;
+}

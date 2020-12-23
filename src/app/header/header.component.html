@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse">}
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Recipe book</a>
+        </div>
+        <div class="navbar-default">
+            <ul class="nav navbar-nav navbar-inverse">
+              <li><a [routerLink]="['/recipes']" routerLinkActive="active">Recipes</a></li>
+              <li><a [routerLink]="['/shopping-list']" routerLinkActive='active'>Shopping List</a></li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="isAuthenticated" (click)="onLogout()"><a>Log Out</a></li>
+            <li class="dropdown" appDropdown *ngIf="isAuthenticated">
+                <a  class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a (click)="onSaveRecipes()">Save data</a></li>
+                    <li><a (click)="onFetchData()">Fetch Data</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

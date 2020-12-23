@@ -1,0 +1,11 @@
+<a [routerLink]="[content.rpID]" 
+class="list-group-item clearfix" style="cursor: pointer;">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{content.name}}</h4>
+        <p class="list-group-item-text">{{content.description}}</p>
+    </div>
+    <span class="pull-right">
+        <img [src]="content.imagePath" alt="no funca" class="img-responsive" style="max-height: 50px;">
+    </span>
+
+</a>  
